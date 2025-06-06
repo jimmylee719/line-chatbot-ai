@@ -1,0 +1,141 @@
+:root {
+    --primary-color: 210 100% 50%; /* #007BFF */
+    --success-color: 120 100% 25%; /* #28A745 */
+    --warning-color: 45 100% 50%; /* #FFC107 */
+    --danger-color: 0 100% 50%; /* #DC3545 */
+    --info-color: 195 100% 50%; /* #17A2B8 */
+    --dark-color: 210 11% 15%; /* #343A40 */
+    --light-color: 210 17% 95%; /* #F8F9FA */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.feature-item:hover {
+    background-color: var(--bs-gray-100);
+}
+
+[data-bs-theme="dark"] .feature-item:hover {
+    background-color: var(--bs-gray-800);
+}
+
+.status-indicator .badge {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.config-item {
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background-color: var(--bs-gray-50);
+    border: 1px solid var(--bs-gray-200);
+}
+
+[data-bs-theme="dark"] .config-item {
+    background-color: var(--bs-gray-800);
+    border-color: var(--bs-gray-700);
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: 1px solid var(--bs-gray-200);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+[data-bs-theme="dark"] .card {
+    border-color: var(--bs-gray-700);
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.alert {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Loading animations */
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .hero-icon .fa-5x {
+        font-size: 3rem !important;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feature-item i {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Custom utilities */
+.text-line-green {
+    color: #00b900 !important;
+}
+
+.bg-line-green {
+    background-color: #00b900 !important;
+}
+
+.border-line-green {
+    border-color: #00b900 !important;
+}
