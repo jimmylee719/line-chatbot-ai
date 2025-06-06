@@ -1,1 +1,4 @@
-from app import app  # noqa: F401
+from app import app
+
+# Vercel requires this specific variable name
+app = app
